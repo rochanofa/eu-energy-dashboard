@@ -1,0 +1,14 @@
+eu_energy_dbt:
+  outputs:
+    dev:
+      type: bigquery
+      dataset: euenergy
+      project: eu-energy-proj
+      keyfile: sa.json
+      location: US
+      method: service-account
+      priority: interactive
+      threads: 16
+      timeout_seconds: 300
+      fixed_retries: 1
+  target: dev
