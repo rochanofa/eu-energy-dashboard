@@ -1,4 +1,4 @@
-euenergy:
+eu_energy_dbt:
   outputs:
     dev:
       type: bigquery
