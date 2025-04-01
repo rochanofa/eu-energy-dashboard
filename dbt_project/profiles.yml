@@ -4,7 +4,7 @@ eu_energy_dbt:
       type: bigquery
       dataset: euenergy
       project: eu-energy-proj
-      keyfile: sa.json
+      keyfile: "{{ kv('GCP_CREDS') }}"
       location: US
       method: service-account
       priority: interactive
