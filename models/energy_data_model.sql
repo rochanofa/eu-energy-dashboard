@@ -26,4 +26,4 @@ WITH energy_data AS (
     )
 )
 
-SELECT * FROM energy_data;
+SELECT * FROM energy_data
