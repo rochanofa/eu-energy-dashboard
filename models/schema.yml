@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: energy_data
+    description: "Energy consumption data for EU, EEA, and UK from 2019-2023."
+    columns:
+      - name: energy_id
+        description: "Unique identifier combining country and year."
+        tests:
+          - unique
+          - not_null
+
+      - name: country
+        description: "Name of the country."
+        tests:
+          - not_null
+
+      - name: year
+        description: "Year of the energy data record."
+        tests:
+          - not_null
+
+      - name: primary_energy_consumption
+        description: "Total primary energy consumption."
+      
+      - name: renewables_consumption
+        description: "Energy consumption from renewable sources."
+
+      - name: coal_consumption
+        description: "Energy consumption from coal."
+
+      - name: oil_consumption
+        description: "Energy consumption from oil."
+
+      - name: gas_consumption
+        description: "Energy consumption from gas."
+
+      - name: co2_emissions
+        description: "Total CO₂ emissions related to energy consumption."
