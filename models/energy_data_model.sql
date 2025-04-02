@@ -7,8 +7,9 @@ WITH euenergy AS (
         renewables_consumption, 
         coal_consumption, 
         oil_consumption, 
-        gas_consumption, 
-        co2_emissions
+        gas_consumption,
+        energy_per_capita,
+        greenhouse_gas_emissions
     FROM `eu-energy-proj.euenergy.energy_data`
     WHERE year BETWEEN 2019 AND 2023
     AND country IN (

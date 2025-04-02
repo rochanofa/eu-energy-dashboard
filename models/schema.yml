@@ -35,5 +35,8 @@ models:
       - name: gas_consumption
         description: "Energy consumption from gas."
 
-      - name: co2_emissions
-        description: "Total CO₂ emissions related to energy consumption."
+      - name: energy_per_capita
+        description: "energy consumption per capita"
+
+      - name: greenhouse_gass_emissions
+        description: "Total GHG emissions related to energy consumption."
