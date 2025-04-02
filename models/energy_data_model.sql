@@ -1,4 +1,4 @@
-WITH energy_data AS (
+WITH euenergy AS (
     SELECT 
         CONCAT(country, '-', year) AS energy_id, -- Unique identifier
         country, 
@@ -9,7 +9,7 @@ WITH energy_data AS (
         oil_consumption, 
         gas_consumption, 
         co2_emissions
-    FROM `eu-energy-proj.energy_data.energy_consumption`
+    FROM `eu-energy-proj.euenergy.energy_data`
     WHERE year BETWEEN 2019 AND 2023
     AND country IN (
         -- European Union (EU) countries
@@ -26,4 +26,4 @@ WITH energy_data AS (
     )
 )
 
-SELECT * FROM energy_data
+SELECT * FROM euenergy
