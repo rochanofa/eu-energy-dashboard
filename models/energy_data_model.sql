@@ -4,14 +4,14 @@ WITH euenergy AS (
         country, 
         year, 
         primary_energy_consumption, 
-        renewables_consumption, 
-        coal_consumption, 
-        oil_consumption, 
-        gas_consumption,
+        fossil_fuel_consumption,
+        renewables_consumption,
+        fossil_electricity, 
+        renewables_electricity,
         energy_per_capita,
         greenhouse_gas_emissions
     FROM `eu-energy-proj.euenergy.energy_data`
-    WHERE year BETWEEN 2019 AND 2023
+    WHERE year BETWEEN 2000 AND 2023
     AND country IN (
         -- European Union (EU) countries
         'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 
