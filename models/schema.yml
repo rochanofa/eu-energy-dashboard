@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: energy_data
+  - name: energy_data_model
     description: "Energy consumption data for EU, EEA, and UK from 2019-2023."
     columns:
       - name: energy_id
