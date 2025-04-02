@@ -9,7 +9,7 @@ WITH energy_data AS (
         oil_consumption, 
         gas_consumption, 
         co2_emissions
-    FROM `your-project-id.energy_data.energy_consumption`
+    FROM `eu-energy-proj.energy_data.energy_consumption`
     WHERE year BETWEEN 2019 AND 2023
     AND country IN (
         -- European Union (EU) countries
