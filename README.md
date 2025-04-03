@@ -91,9 +91,12 @@ Choose the owid_energy.energy_summary table.
 
 Build visualizations.
 
-📊 Dashboard Insights
+📊 Dashboard Insights : https://lookerstudio.google.com/reporting/316bd9e7-9e60-423d-8215-0ab4acbbdb8f
 
-✔ Total Energy Consumption per Country (Bar Chart)✔ Renewable vs. Fossil Energy in EU Countries (Stacked Chart)✔ CO₂ Emissions vs. Energy Consumption (Scatter Plot)✔ Top 10 Countries with Highest Renewable Energy (Leaderboard)
+✔ Avg Yearly Energy Consumption per Country (Mapped)
+✔ Renewable vs. Fossil Energy per Country (Stacked Chart)
+✔ Trend of Fossil Fuel , Renewables Electricity Generation and GHG Emissions over the year (Scoreboard)
+✔ Top 5 Countries with Highest Energy per capita (Leaderboard)
 
 📌 Folder Structure
 
