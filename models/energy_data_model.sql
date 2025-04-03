@@ -14,13 +14,13 @@ WITH euenergy AS (
     WHERE year BETWEEN 2000 AND 2023
     AND country IN (
         -- European Union (EU) countries
-        'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 
+        'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia', 
         'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 
         'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 
         'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden',
         
-        -- European Economic Area (EEA) countries (non-EU)
-        'Iceland', 'Liechtenstein', 'Norway',
+        -- European Economic Area (EEA) countries and Switzerland (non-EU)
+        'Iceland', 'Liechtenstein', 'Norway', 'Switzerland',
         
         -- United Kingdom (UK)
         'United Kingdom'
