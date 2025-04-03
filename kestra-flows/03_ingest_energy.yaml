@@ -1,0 +1,35 @@
+id: 03_ingest_energy
+namespace: euenergy
+
+tasks:
+  # Step 1: Download the CSV file from the OWID energy data source
+  - id: extract_csv
+    type: io.kestra.plugin.core.http.Download
+    uri: "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv"
+
+  # Step 2: Upload the CSV file to Google Cloud Storage (GCS)
+  - id: upload_to_gcs
+    type: io.kestra.plugin.gcp.gcs.Upload
+    from: "{{ outputs.extract_csv.uri }}"  # Use uri from the download step
+    to: "gs://eu-energy-bucket01/owid-energy-data.csv"
+
+  # Step 3: Load the CSV file from GCS into BigQuery
+  - id: load_to_bigquery
+    type: io.kestra.plugin.gcp.bigquery.LoadFromGcs
+    from:
+      - "{{ outputs.upload_to_gcs.uri }}"
+    destinationTable: "eu-energy-proj.euenergy.energy_data"
+    format: "CSV"
+    autodetect: true
+    csvOptions:
+      fieldDelimiter: ","
+      skipLeadingRows: 1  # Adjust if the file has a header row
+    writeDisposition: "WRITE_TRUNCATE"  # Overwrites table data on each run
+    
+pluginDefaults:
+  - type: io.kestra.plugin.gcp
+    values:
+      serviceAccount: "{{kv('GCP_CREDS')}}"
+      projectId: "{{kv('GCP_PROJECT_ID')}}"
+      location: "{{kv('GCP_LOCATION')}}"
+      bucket: "{{kv('GCP_BUCKET_NAME')}}"
