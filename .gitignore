@@ -1,4 +1,4 @@
-service-account.json
+service-account.json/
 target/
 dbt_packages/
 logs/
