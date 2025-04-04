@@ -74,7 +74,7 @@ Commands:
 cd dbt
 dbt run
 ```
-SQL queies for this project to run dbt model [`energy_data_model.aql`](https://github.com/rochanofa/eu-energy-dashboard/blob/main/dbt/models/energy_data_model.sql)<p>
+SQL queries for this project to run dbt model [`energy_data_model.aql`](https://github.com/rochanofa/eu-energy-dashboard/blob/main/dbt/models/energy_data_model.sql)<p>
 
 7️⃣ Connect Looker Studio to BigQuery
 1. Open Looker Studio.
